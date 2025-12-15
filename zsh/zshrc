@@ -22,13 +22,17 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+export PATH=$PATH:$HOME/.local/bin
+
+export EDITOR="nvim"
 
 # User aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias c="clear"
+
 alias vim="nvim"
+
+alias ra="ranger"
 
 # Lsd
 alias ls="lsd"
