@@ -43,5 +43,24 @@ alias la='lsd -a'
 alias lla='lsd -la'
 alias lt='lsd --tree'
 
+# tmux
+# 新建命名会话：tmuxn dev → tmux new -s dev
+alias tmuxn="tmux new -s"
+# 列出所有会话：tmuxl → tmux ls
+alias tmuxl="tmux ls"
+# 连接会话：tmuxt dev → tmux attach -t dev
+alias tmuxt="tmux attach -t"
+# 关闭会话：tmuxk dev → tmux kill-session -t dev
+alias tmuxk='tmux kill-session -t'
+# 连接最近的会话：tmuxa → tmux attach
+alias tmuxa='tmux attach'
+# 关闭所有会话：tmuxks → tmux kill-server
+alias tmuxks='tmux kill-server'
+# 新建命名窗口：tmuxnw log → tmux new-window -n log
+alias tmuxnw='tmux new-window -n'
+# 快速脱离并列出会话
+alias tmuxd='tmux detach && tmux ls'
+
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
