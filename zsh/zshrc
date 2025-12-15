@@ -34,6 +34,8 @@ alias vim="nvim"
 
 alias ra="ranger"
 
+alias lg="lazygit"
+
 # Lsd
 alias ls="lsd"
 alias ll='lsd -l'
