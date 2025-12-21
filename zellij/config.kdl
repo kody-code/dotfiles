@@ -279,4 +279,6 @@ copy_command "wl-copy"
  
 // Whether to show tips on startup
 show_startup_tips false
+
+theme "dracula"
  
