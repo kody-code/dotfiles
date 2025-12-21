@@ -1,0 +1,42 @@
+                  -`
+                 .o+`
+                `ooo/
+               `+oooo:
+              `+oooooo:
+              -+oooooo+:
+            `/:-:++oooo+:
+           `/++++/+++++++:
+          `/++++++++++++++:
+         `/+++ooooooooooooo/`
+        ./ooosssso++osssssso+`
+       .oossssso-````/ossssss+`
+      -osssssso.      :ssssssso.
+     :osssssss/        osssso+++.
+    /ossssssss/        +ssssooo/-
+  `/ossssso+/:-        -:/+osssso+-
+ `+sso+:-`                 `.-/+oso:
+`++:.                           `-/+/
+.`                                 `/[1G[18A[41Ckody@MyArch
+[41C-----------
+[41COS: Arch Linux x86_64
+[41CHost: C.H110M-K PRO (V21)
+[41CKernel: Linux 6.18.2-arch2-1
+[41CUptime: 18 mins
+[41CPackages: 664 (pacman)
+[41CShell: zsh 5.9
+[41CDisplay (Unknown-1): 800x600 in 10", 60 Hz
+[41CWM: Hyprland 0.52.2 (Wayland)
+[41CCursor: Adwaita
+[41CTerminal: alacritty 0.16.1
+[41CTerminal Font: Jetbrains Mono Nerd Font (14pt, Regular)
+[41CCPU: Intel(R) Core(TM) i5-6400 (4) @ 3.30 GHz
+[41CGPU: NVIDIA GeForce GTX 1050 [Discrete]
+[41CMemory: 2.27 GiB / 31.29 GiB (7%)
+[41CSwap: 0 B / 8.00 GiB (0%)
+[41CDisk (/): 13.02 GiB / 229.87 GiB (6%) - xfs
+[41CDisk (/home): 11.17 GiB / 119.18 GiB (9%) - xfs
+[41CLocal IP (enp2s0): 192.168.1.28/24
+[41CLocale: zh_CN.UTF-8
+[41C
+[41C[40m   [41m   [42m   [43m   [44m   [45m   [46m   [47m   [m
+[41C[5m[100m   [101m   [102m   [103m   [104m   [105m   [106m   [107m   [m
