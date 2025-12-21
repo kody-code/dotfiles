@@ -29,5 +29,5 @@ while true; do
   echo "$wallpaper" >"$CACHE"
 
   # 等待5分钟
-  sleep 300
+  sleep 3m
 done
