@@ -1,0 +1,48 @@
+layout {
+
+    tab name="dev" {
+        pane size=1 borderless=true {
+            plugin location="tab-bar"
+        }
+
+        pane split_direction="vertical" {
+        pane name="code" command="$SHELL" size="55%"
+        pane split_direction="horizontal" size="45%" {
+                pane name="dev-top" command="$SHELL" size="50%"
+                pane name="dev-bottom" command="$SHELL" size="50%"
+            }
+        }
+
+        pane size=1 borderless=true {
+            plugin location="status-bar"
+        }
+    }
+
+    tab name="run" {
+        pane size=1 borderless=true {
+            plugin location="tab-bar"
+        }
+
+        pane name="main-run" command="$SHELL" size="100%"
+
+        pane size=1 borderless=true {
+            plugin location="status-bar"
+        }
+
+    }
+
+    tab name="git" {
+        pane size=1 borderless=true {
+            plugin location="tab-bar"
+        }
+
+        pane name="main-git" command="lazygit" size="100%"
+
+        pane size=1 borderless=true {
+            plugin location="status-bar"
+        }
+
+    }
+
+
+}
