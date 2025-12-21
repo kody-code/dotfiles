@@ -26,6 +26,10 @@ export PATH=$PATH:$HOME/.local/bin
 
 export EDITOR="nvim"
 
+# rust
+export RUSTUP_UPDATE_ROOT=https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup
+export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
+
 # User aliases
 
 alias c="clear"
