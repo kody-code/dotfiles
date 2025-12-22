@@ -72,7 +72,8 @@ keybinds clear-defaults=true {
         bind "j" { Resize "Increase down"; }
         bind "k" { Resize "Increase up"; }
         bind "l" { Resize "Increase right"; }
-        bind "Ctrl n" { SwitchToMode "normal"; }
+        // 关键修改1：将 Ctrl n 改为 Ctrl m
+        bind "Ctrl m" { SwitchToMode "normal"; }
     }
     move {
         bind "left" { MovePane "left"; }
@@ -178,8 +179,9 @@ keybinds clear-defaults=true {
     shared_except "locked" "pane" {
         bind "Ctrl p" { SwitchToMode "pane"; }
     }
+    // 关键修改2：将 Ctrl n 改为 Ctrl m
     shared_except "locked" "resize" {
-        bind "Ctrl n" { SwitchToMode "resize"; }
+        bind "Ctrl m" { SwitchToMode "resize"; }
     }
     shared_except "normal" "locked" "entersearch" {
         bind "enter" { SwitchToMode "normal"; }
@@ -281,4 +283,3 @@ copy_command "wl-copy"
 show_startup_tips false
 
 theme "dracula"
- 
