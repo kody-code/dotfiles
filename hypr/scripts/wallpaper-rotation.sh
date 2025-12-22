@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WALLDIR="$HOME/.config/hypr/wallpapers"
+WALLDIR="$HOME/Picture/wallpapers"
 CACHE="$HOME/.cache/current_wallpaper"
 
 while true; do
