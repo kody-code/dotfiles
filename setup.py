@@ -3,7 +3,6 @@ import shutil
 from pathlib import Path
 
 
-# ANSI 颜色转义序列
 class Color:
     RED = "\033[31m"
     GREEN = "\033[32m"
@@ -14,21 +13,25 @@ class Color:
     RESET = "\033[0m"
 
 
-# 源文件路径
-source_path = Path(os.getcwd())
+all_configs: dict = {
+    "alacritty": os.path.expanduser("~/.config/alacritty"),
+    "hypr": os.path.expanduser("~/.config/hypr"),
+    "mako": os.path.expanduser("~/.config/mako"),
+    "ranger": os.path.expanduser("~/.config/ranger"),
+    "rofi": os.path.expanduser("~/.config/rofi"),
+    "waybar": os.path.expanduser("~/.config/waybar"),
+    "zellij": os.path.expanduser("~/.config/zellij"),
+    "zsh/zshrc": os.path.expanduser("~/.zshrc"),
+}
 
-# 连接路径
-link_path = Path(os.path.expanduser("~/.config"))
+source_path = Path(os.getcwd())
 
 
 def get_all_config() -> list:
-    parent_path = Path(source_path)
-    dirs = []
-    if parent_path.is_dir():
-        for item in parent_path.iterdir():
-            if item.is_dir() and item.name != ".git":
-                dirs.append(str(item.name))
-    return dirs
+    config_name = []
+    for config in all_configs:
+        config_name.append(str(config))
+    return config_name
 
 
 def choose_config() -> list:
@@ -40,14 +43,11 @@ def choose_config() -> list:
 
     if num == "all" or num == "":
         return configs
-
     try:
         num_list = [int(num.strip()) for num in num.split() if num.strip()]
-        # 检查数字有效性
         for i in num_list:
             if i < 1 or i > len(configs):
                 raise IndexError
-
         selected = [configs[i - 1] for i in num_list]
         return selected
     except (ValueError, IndexError):
@@ -66,7 +66,7 @@ def backup_config(configs: list):
     print(f"\n{Color.YELLOW}开始备份现有配置...{Color.RESET}")
 
     for config in configs:
-        target = link_path / config
+        target = Path(all_configs[config])
         if target.exists():
             shutil.move(target, backup_path)
             print(f"  {Color.BLUE}已备份：{config}{Color.RESET}")
@@ -81,10 +81,9 @@ def ln_config(configs: list):
     print(f"\n{Color.YELLOW}开始创建符号链接...{Color.RESET}")
     for config in configs:
         source = source_path / config
-        target = link_path / config
+        target = Path(all_configs[config])
         os.symlink(source, target)
         print(f"  {Color.MAGENTA}已创建链接：{config}{Color.RESET}")
-
     print(f"{Color.GREEN}✓ 所有链接创建完成{Color.RESET}")
 
 
@@ -94,9 +93,7 @@ if __name__ == "__main__":
 
     if not configs:
         print(f"{Color.RED}错误：未找到可配置的文件夹（排除.git目录）{Color.RESET}")
-        exit(1)
 
-    print(f"\n{Color.YELLOW}检测到以下可配置项：{Color.RESET}")
     for index, item in enumerate(configs):
         print(f"  {index + 1}: {Color.BLUE}{item}{Color.RESET}")
 
