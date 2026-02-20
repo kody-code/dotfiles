@@ -18,6 +18,7 @@ all_configs: dict = {
     "awesome": os.path.expanduser("~/.config/awesome"),
     "ranger": os.path.expanduser("~/.config/ranger"),
     "rofi": os.path.expanduser("~/.config/rofi"),
+    "nvim": os.path.expanduser("~/.config/nvim"),
     "zsh/zshrc": os.path.expanduser("~/.zshrc"),
 }
 
