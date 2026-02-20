@@ -1,0 +1,49 @@
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# Theme
+ZSH_THEME="ys"
+
+# Plugins
+plugins=(
+	z
+    	git
+    	extract
+	colored-man-pages
+	command-not-found
+    	zsh-autosuggestions
+    	zsh-syntax-highlighting
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+export PATH=$PATH:$HOME/.local/bin
+
+eval "$(zoxide init zsh)"
+
+export EDITOR="nvim"
+
+# rust
+export RUSTUP_UPDATE_ROOT=https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup
+export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
+
+# User aliases
+
+alias c="clear"
+
+alias vim="nvim"
+
+alias ra="ranger"
+
+alias lg="lazygit"
+
+# Lsd
+alias ls="lsd"
+alias ll='lsd -l'
+alias la='lsd -a'
+alias lla='lsd -la'
+alias lt='lsd --tree'
+
+
+
