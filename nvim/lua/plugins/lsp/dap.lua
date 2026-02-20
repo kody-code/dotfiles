@@ -152,7 +152,7 @@ return {
 
 			-- Mason DAP 配置
 			require("mason-nvim-dap").setup({
-				ensure_installed = { "python", "delve", "codelldb" },
+				ensure_installed = { "python" },
 				handlers = {
 					function(config)
 						require("mason-nvim-dap").default_setup(config)
